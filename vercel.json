@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.js",
+      "src": "app.js", // Gunakan app.js sebagai file utama
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/routes/(.*)",
-      "dest": "index.js"
+      "src": "/(.*)", // Menangkap semua rute
+      "dest": "app.js" // Semua rute diteruskan ke app.js
     }
   ]
 }
